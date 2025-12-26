@@ -19,4 +19,7 @@ sqlc:
 test:
 	go test -v -cover ./...
 
+rundb:
+	docker exec -it postgres-latest psql -U root simple_bank
+
 .PHONY: postgres createdb dropdb migrateup migratedown sqlc
