@@ -22,4 +22,7 @@ test:
 rundb:
 	docker exec -it postgres-latest psql -U root simple_bank
 
-.PHONY: postgres createdb dropdb migrateup migratedown sqlc
+server:
+	go run main.go
+
+.PHONY: postgres createdb dropdb migrateup migratedown sqlc server
